@@ -16,7 +16,7 @@ function run_test() {
         echo "FAILED"
         echo "Expected '$expected_output' in results.txt, but it was not found"
         cat results.txt  # Show results.txt
-		exit 1
+	exit 1
     fi
 
     # Cleaning the results before next test
