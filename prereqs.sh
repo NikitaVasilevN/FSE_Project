@@ -7,4 +7,3 @@ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
 unzip opencv.zip && mkdir -p build && cd build && cmake ../opencv-4.x -DBUILD_LIST=imgproc,imgcodecs && make -j 3
 cd ..
 rm opencv.zip
-rm -r opencv-4.x
