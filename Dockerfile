@@ -12,5 +12,6 @@ RUN chmod +x build.sh
 
 RUN . prereqs.sh
 RUN . build.sh
+RUN . run_tests.sh
 
 ENTRYPOINT ["build/CalcAndDraw"]
