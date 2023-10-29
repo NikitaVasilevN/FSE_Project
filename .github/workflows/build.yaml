@@ -14,7 +14,7 @@ jobs:
           ./prereqs.sh &&  ./build.sh
       - name: Run tests
         run: |
-          pwd
+          ls
           chmod +x run_tests.sh
-          ./run_tests.sh
+          . run_tests.sh
           
