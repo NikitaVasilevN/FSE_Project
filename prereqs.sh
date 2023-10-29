@@ -1,4 +1,4 @@
-#!/usr/env/bin bash
+#!/bin/bash
 #apt clean
 apt update
 apt install cmake g++ unzip wget -y
