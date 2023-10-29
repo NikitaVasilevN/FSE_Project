@@ -1,11 +1,11 @@
-#Team10 project: Calc'N'Draw
+# Team10 project: Calc'N'Draw
 
-###Quickstart:
+### Quickstart:
 
 1. Download files from the repository:
-`git clone <repo>`
+`git clone https://github.com/NikitaVasilevN/FSE_Project.git`
 2. Change your directory to the one with downloaded repository
-`cd <repo>`
+`cd FSE_Project`
 3. Build the Docker image from the Dockerfile:
 `docker build -t team10 .`
 4. Launch the container
@@ -13,7 +13,7 @@
 
 
 
-###Info for the further development:
+### Info for the further development:
 
 * Source code of the project is placed in the file `project_with_images.cpp`. We use math functions from standart libraries, but if you will need more sophisticated ones, you should add a new library with a desired functionality. In that case you will need to build desired libraries and add them to `CMakeLists.txt` to make it possible to include them into your source file.
 
