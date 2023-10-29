@@ -129,6 +129,27 @@ int main() {
         }
     }
 
+    // Create an ofstream object to write to the file
+    std::ofstream outfile("results.txt");
+    if (!outfile) {
+        std::cerr << "Failed to open the file for writing." << std::endl;
+        return 1;  // Exit with an error code
+    }
+
+    // Writing the results to the file instead of cout
+    outfile << "Maximum value: " << find_max(numbers) << std::endl;
+    outfile << "Minimum value: " << find_min(numbers) << std::endl;
+    outfile << "Average: " << find_average(numbers) << std::endl;
+    outfile << "Median: " << find_median(numbers) << std::endl;
+    outfile << "GCD of the list: " << gcd_of_list(numbers) << std::endl;
+    outfile << "LCM of the list: " << lcm_of_list(numbers) << std::endl;
+
+    // Closing the file (although it will close automatically when going out of scope)
+    outfile.close();
+
+    std::cout << "Results have been saved to 'results.txt'." << std::endl;
+
+
     // Output the results directly to the console instead of a file
     std::cout << "Maximum value: " << find_max(numbers) << std::endl;
     std::cout << "Minimum value: " << find_min(numbers) << std::endl;
