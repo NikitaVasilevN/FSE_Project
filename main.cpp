@@ -1,9 +1,14 @@
+#include "opencv2/imgproc.hpp"
+#include "opencv2/imgcodecs.hpp"
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <limits>
 #include <string>
 #include <fstream>
+
+using namespace cv;
+using namespace std;
 
 // Clear the input stream
 void clear_cin() {
@@ -131,6 +136,65 @@ int main() {
     std::cout << "Median: " << find_median(numbers) << std::endl;
     std::cout << "GCD of the list: " << gcd_of_list(numbers) << std::endl;
     std::cout << "LCM of the list: " << lcm_of_list(numbers) << std::endl;
+
+    Mat img(300, 500, CV_8UC3, Scalar(255, 255, 255));
+
+    if(img.empty()){
+        cout << "Could not load image" << endl;
+        cin.get();
+        return -1;
+    }
+
+    putText(img, //target image
+            "Maximum value: " + to_string(find_max(numbers)), //text
+            Point(5, 30), //top-left position
+            FONT_HERSHEY_DUPLEX,
+            1.0,
+            CV_RGB(0, 0, 0), //font color
+            2);
+
+    putText(img, //target image
+            "Minimum value: " +to_string(find_min(numbers)), //text
+            Point(5, 60), //top-left position
+            FONT_HERSHEY_DUPLEX,
+            1.0,
+            CV_RGB(0, 0, 0), //font color
+            2);
+
+    putText(img, //target image
+            "Average: " + to_string(find_average(numbers)), //text
+            Point(5, 90), //top-left position
+            FONT_HERSHEY_DUPLEX,
+            1.0,
+            CV_RGB(0, 0, 0), //font color
+            2);
+
+    putText(img, //target image
+            "Median: " + to_string(find_median(numbers)), //text
+            Point(5, 120), //top-left position
+            FONT_HERSHEY_DUPLEX,
+            1.0,
+            CV_RGB(0, 0, 0), //font color
+            2);
+
+
+    putText(img, //target image
+            "GCD of the list: " + to_string(gcd_of_list(numbers)), //text
+            Point(5, 150), //top-left position
+            FONT_HERSHEY_DUPLEX,
+            1.0,
+            CV_RGB(0, 0, 0), //font color
+            2);
+
+    putText(img, //target image
+            "LCM of the list: " + to_string(lcm_of_list(numbers)), //text
+            Point(5, 180), //top-left position
+            FONT_HERSHEY_DUPLEX,
+            1.0,
+            CV_RGB(0, 0, 0), //font color
+            2);
+
+    imwrite("results.jpg", img);
 
     return 0;
 }
