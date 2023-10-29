@@ -12,3 +12,8 @@ jobs:
           chmod +x prereqs.sh 
           chmod +x ./build.sh
           ./prereqs.sh &&  ./build.sh
+      - name: Run tests
+        run: |
+          chmod +x run_tests.sh
+          ./run_tests.sh
+          
