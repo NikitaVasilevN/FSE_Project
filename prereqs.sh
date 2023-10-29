@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #!/usr/env/bin bash
+=======
+#!/bin/bash
+#apt clean
+>>>>>>> 66db99cd516227a65bb64f17953a516dfffe69d4
 apt update
 apt install cmake g++ unzip wget -y
 mkdir opencv && cd opencv
