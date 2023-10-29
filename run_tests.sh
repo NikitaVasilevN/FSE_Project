@@ -1,6 +1,5 @@
-
+#!/usr/env/bin bash
 function run_test() {
-    cd build
     test_name=$1
     input=$2
     expected_output=$3
@@ -8,7 +7,7 @@ function run_test() {
     echo -n "$test_name: "
 
     # Running program and giving input
-    echo -e "$input" | . CalcAndDraw
+    echo -e "$input" | ./CalcAndDraw
 
     # Checking program output
     if grep -q "$expected_output" results.txt; then
@@ -23,6 +22,7 @@ function run_test() {
     rm -f results.txt
 }
 
+cd build
 
 # Running tests
 run_test "Test 1: Normal input" "3\n5\n10\n25\n" "GCD of the list: 5"
