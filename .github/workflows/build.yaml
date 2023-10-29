@@ -1,0 +1,17 @@
+name: building-checking
+run-name: ${{ github.actor }} is building software
+on: [push]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install prereqs
+        run: |
+          sudo apt update
+          chmod +x prereqs.sh
+          ./prereqs.sh
+      - name: Build
+        run: |
+          chmod +x ./build.sh
+          ./build.sh
