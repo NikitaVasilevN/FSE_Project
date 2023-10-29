@@ -20,10 +20,10 @@ In this project, we take several integer numbers from stdin, calculate mathemati
 
 1. Run an empty ubuntu:23.04 container:
 `docker run -it  ubuntu:23.04`
-2.  Clone the repo
+2. `apt update && apt install git`
+3. Clone the repo
 `git clone https://github.com/NikitaVasilevN/FSE_Project.git`
-3. `mv FSE_Project  calc_n_draw`
-4. `cd calc_n_draw`
+4. `cd FSE_Project`
 5. Make the files executables
 `chmod +x prereqs.sh`
 `chmod +x build.sh`
