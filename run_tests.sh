@@ -1,6 +1,6 @@
 
 function run_test() {
-	cd build
+    cd build
     test_name=$1
     input=$2
     expected_output=$3
