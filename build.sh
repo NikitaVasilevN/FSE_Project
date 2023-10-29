@@ -1,8 +1,8 @@
 #!/bin/bash
-echo "2"
-echo "2"
-echo "2"
+export OpenCV_DIR=$(cat opencv_dir_keeper)
+echo "I'm in source"
 echo $OpenCV_DIR
+echo "I'm in source"
 echo "2"
 echo "2"
 echo "2"
