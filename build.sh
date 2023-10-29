@@ -1,3 +1,9 @@
 #!/bin/bash
-export OpenCV_DIR=/calc_n_draw/opencv/build
+echo "2"
+echo "2"
+echo "2"
+echo $OpenCV_DIR
+echo "2"
+echo "2"
+echo "2"
 mkdir -p build && cd build && cmake .. && make
