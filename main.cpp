@@ -41,6 +41,8 @@ bool safe_input_one_number(int &n) {
 }
 
 int gcd(int a, int b) {
+    a = std::abs(a);
+    b = std::abs(b);
     while (b) {
         a %= b;
         std::swap(a, b);
@@ -57,6 +59,8 @@ int gcd_of_list(const std::vector<int>& numbers) {
 }
 
 int lcm(int a, int b) {
+    a = std::abs(a);
+    b = std::abs(b);
     return a / gcd(a, b) * b;
 }
 
