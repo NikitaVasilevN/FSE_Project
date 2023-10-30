@@ -9,8 +9,10 @@ WORKDIR calc_n_draw
 
 RUN chmod +x prereqs.sh
 RUN chmod +x build.sh
+RUN chmod +x run_tests.sh
 
 RUN . prereqs.sh
 RUN . build.sh
+RUN . run_tests.sh
 
 ENTRYPOINT ["build/CalcAndDraw"]

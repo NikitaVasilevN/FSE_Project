@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project( CalcAndDraw )
-set(OpenCV_DIR /opencv/build)
+set(OpenCV_DIR $ENV{OpenCV_DIR}) 
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable( CalcAndDraw main.cpp)
