@@ -11,6 +11,3 @@ rm opencv.zip
 cd ..
 touch opencv_dir_keeper
 echo $OpenCV_DIR > opencv_dir_keeper
-echo "I'm in prereqs"
-echo $OpenCV_DIR
-echo "I'm in prereqs"
